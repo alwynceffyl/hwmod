@@ -27,7 +27,10 @@ Simply pick the ones you that smile at you the most.
 - The illusion consists concentric circles in a grid of four rows and seven columns.
 - At each grid node there are six concentric rings, with the biggest one having a radius of `60px`.
 With each circle the radius decreases by 10 pixels.
-- Each circle has a different color. Start with the eight bit color of value `220` and decrease it by `20` for each circle.
+- Each circle has a different color.
+Originally we had a different internal color representation in VHDLDraw which resulted in the yellow shaded rings below.
+In the new, higher-fidelity, color scheme this is a bit awkward (if you already used this scheme or prefer it in general, you can apply the `from_rgb332` to the RGB values you used previously in order to get the previous colors).
+For a greyscale color palette start with the value 220 for red, green and blue and then decrement this value by 40 for each ring.
 - In addition to that, you should draw a black outline for each circle with a line width of `1px`
 - At each grid node also draw a black diamond. As width and height for the diamonds use the diameter of the biggest concentric circle. The line width of the diamonds should be `2px`.
 

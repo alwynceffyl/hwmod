@@ -89,6 +89,9 @@ qemu-img convert -f vdi -O qcow2 ECS-EDA-Tools.vdi ECS-EDA-Tools.qcow2
 | [bin2dec](chapter1/bin2dec/task.md) | 2 | arithmetic operations, unconstrained types |
 | [structural_adder](chapter1/structural_adder/task.md) | 1 | structural modeling, combinational |
 | [creative](chapter1/creative/task.md) | 1 | vhdldraw, control flow |
+| [sorting](chapter1/sorting/task.md) | 1 | control flow, subprograms, VHDLDraw |
+| [barcode](chapter1/barcode/task.md) | 2 | VHDLDraw, reading specifications |
+| [sram](chapter1/sram/task.md) | 1 | subprograms, testbench, reading specifications |
 
 ## Demonstration I
 

@@ -9,45 +9,60 @@ use work.math_pkg.all;
 
 package vhdldraw_pkg is
 	type color_t is record
-		red   : natural;
-		green : natural;
-		blue  : natural;
+		red   : unsigned(7 downto 0);
+		green : unsigned(7 downto 0);
+		blue  : unsigned(7 downto 0);
 	end record;
 
-	type points_t is array(natural range <>) of natural;
+	type points_t is array(natural range <>) of integer;
 
-	constant BLACK : color_t := (others => 0);
-	constant WHITE : color_t := (blue => 3, others => 7);
-	constant RED   : color_t := (red => 7, green => 0, blue => 0);
-	constant BLUE  : color_t := (red => 0, green => 0, blue => 3);
-	constant GREEN : color_t := (red => 0, green => 7, blue => 0);
+	constant BLACK    : color_t := (others => (others => '0'));
+	constant WHITE    : color_t := (others => (others => '1'));
+	constant RED      : color_t := (red => x"FF", green => x"00", blue => x"00");
+	constant GREEN    : color_t := (red => x"00", green => x"FF", blue => x"00");
+	constant BLUE     : color_t := (red => x"00", green => x"00", blue => x"FF");
+	constant CYAN     : color_t := (red => x"00", green => x"FF", blue => x"FF");
+	constant YELLOW   : color_t := (red => x"FF", green => x"FF", blue => x"00");
+	constant MAGENTA  : color_t := (red => x"FF", green => x"00", blue => x"FF");
+	constant PURPLE   : color_t := (red => x"66", green => x"00", blue => x"CC");
+	constant ORANGE   : color_t := (red => x"FF", green => x"80", blue => x"00");
+	constant PINK     : color_t := (red => x"FF", green => x"AA", blue => x"AA");
+	constant GRAY     : color_t := (red => x"80", green => x"80", blue => x"80");
+	constant BROWN    : color_t := (red => x"80", green => x"40", blue => x"00");
+
+
+	function create_color(r, g, b : natural) return color_t;
+	function from_rgb332(r, g, b : natural) return color_t;
 
 	type vhdldraw_t is protected
 		procedure init(width : natural; height: natural);
-		procedure init(size : natural) ;
-		procedure setColor(color : color_t);
-		procedure setColor(r, g, b : natural);
-		procedure setLineWidth(lineWidth : natural);
-		impure function getLineWidth return natural;
-		impure function getColor return color_t;
-		procedure clear(color : color_t := WHITE);
-		procedure show(filename : string);
+		procedure init(size : natural);
 
 		impure function getWidth return natural;
 		impure function getHeight return natural;
 
+		procedure setColor(color : color_t);
+		procedure setColor(r, g, b : natural);
+		impure function getColor return color_t;
+
+		procedure setLineWidth(lineWidth : natural);
+		impure function getLineWidth return natural;
+
+		procedure clear(color : color_t := WHITE);
+		procedure show(filename : string);
+
 		procedure drawPoint(x, y : integer);
 		procedure drawLine(x0, y0, x1, y1 : integer);
 
-		procedure drawSquare(x, y : integer; size : natural);
-		procedure drawRectangle(x, y : integer; width, height : natural);
+		procedure drawSquare(x, y : integer; size : integer);
+		procedure drawRectangle(x, y : integer; width, height : integer);
 		procedure drawCircle(centerX, centerY : integer; radius : natural);
 		procedure drawEllipse(centerX, centerY :integer; horizontalRadius, verticalRadius : natural);
 		procedure drawTriangle(x0, y0, x1, y1, x2, y2 : integer);
 		procedure drawPolygon(vertices : points_t);
 
-		procedure fillSquare(x, y : integer; size : natural);
-		procedure fillRectangle(x, y : integer; width, height : natural);
+		procedure fillSquare(x, y : integer; size : integer);
+		procedure fillRectangle(x, y : integer; width, height : integer);
 		procedure fillEllipse(x, y : integer; horizontalRadius, verticalRadius : natural);
 		procedure fillCircle(x, y : integer; radius : natural);
 		procedure fillTriangle(x0, y0, x1, y1, x2, y2 : integer);
@@ -56,6 +71,33 @@ package vhdldraw_pkg is
 end package;
 
 package body vhdldraw_pkg is
+	function create_color(r, g, b : natural) return color_t is
+		variable color : color_t;
+	begin
+		assert r <= 2**color.red'length-1 report "Red color component out of range";
+		assert g <= 2**color.green'length-1 report "Green color component out of range";
+		assert b <= 2**color.blue'length-1 report "Blue color component out of range";
+
+		color.red := to_unsigned(r, color.red'length);
+		color.green := to_unsigned(g, color.green'length);
+		color.blue := to_unsigned(b, color.blue'length);
+
+		return color;
+	end function;
+
+	function from_rgb332(r, g, b : natural) return color_t is
+		variable color : color_t;
+	begin
+		assert r <= 7 report "Red color component out of range of RGB 3-3-2";
+		assert g <= 7 report "Green color component out of range of RGB 3-3-2";
+		assert b <= 3 report "Blue color component out of range of RGB 3-3-2";
+
+		color.red :=   to_unsigned(integer(real(r) * 36.429), color.red'length);
+		color.green := to_unsigned(integer(real(g) * 36.429), color.green'length);
+		color.blue :=  to_unsigned(integer(real(b) * 85.0), color.blue'length);
+		return color;
+	end function;
+
 	function min(constant a, b: in integer) return integer is
 	begin
 		if a < b then
@@ -70,7 +112,7 @@ package body vhdldraw_pkg is
 		variable frame : frame_ptr_t := null;
 		variable pen_color : color_t := BLACK;
 		variable pen_width : natural := 1;
-		
+
 		procedure init(width: natural; height: natural) is
 		begin
 			if frame /= null then
@@ -96,7 +138,7 @@ package body vhdldraw_pkg is
 
 		procedure setColor(r, g, b : natural) is
 		begin
-			pen_color := (red => r, green => g, blue => b);
+			pen_color := create_color(r, g, b);
 		end procedure;
 
 		procedure setLineWidth(lineWidth : natural) is
@@ -173,14 +215,12 @@ package body vhdldraw_pkg is
 			end loop;
 		end procedure;
 
-		procedure drawRectangle(x, y : integer; width, height : natural) is
-			constant endrow : integer := max(0, min(y + height, frame'length(1)-1));
-			constant endcol : integer := max(0, min(x + width, frame'length(2)-1));
+		procedure drawRectangle(x, y : integer; width, height : integer) is
 		begin
-			drawPolygon((x,y, x+width,y, x+width,y+height, x,y+height));
+			drawPolygon((x,y, x+width-1,y, x+width-1,y+height-1, x,y+height-1));
 		end procedure;
 
-		procedure drawSquare(x, y : integer; size : natural) is
+		procedure drawSquare(x, y : integer; size : integer) is
 		begin
 			drawRectangle(x, y, size, size);
 		end procedure;
@@ -230,7 +270,7 @@ package body vhdldraw_pkg is
 					drawPoint(x + col, y - row);
 					drawPoint(x - col, y - row);
 				end if;
-			
+
 				if (d > 0) then
 						row := row - 1;
 						dy := dy - 2 * a2;
@@ -275,7 +315,7 @@ package body vhdldraw_pkg is
 		function evenOddRule(x, y: integer; points : points_t) return boolean is
 			constant maxIdx : natural := points'length / 2;
 			variable inside : boolean := False;
-			variable x0, x1, y0, y1 : natural;
+			variable x0, x1, y0, y1 :integer;
 			variable slope : integer;
 			variable nextIdx : natural;
 		begin
@@ -285,10 +325,11 @@ package body vhdldraw_pkg is
 				y1 := points(2*i+1);
 				x0 := points(2*nextIdx);
 				y0 := points(2*nextIdx+1);
-				if x = x0 and y = y0 then
-					return True;
-				end if;
-				if (y0 > y) /= (y1 > y) then
+				if y0 = y1 and y0 = y then
+					if x >= min(x0, x1) and x <= max(x0, x1) then
+						return True;
+					end if;
+				elsif (y0 >= y) /= (y1 >= y) then
 					slope := (x - x0) * (y1 - y0) - (x1 - x0) * (y - y0);
 					if slope = 0 then
 						return True;
@@ -303,9 +344,9 @@ package body vhdldraw_pkg is
 		procedure fillPolygon(vertices : points_t) is
 			constant maxIdx : natural := vertices'length / 2;
 			variable nextIdx : natural;
-			variable max_x, max_y : natural := 0;
-			variable min_y : natural := frame'length(1);
-			variable min_x : natural := frame'length(2);
+			variable max_x, max_y : integer := 0;
+			variable min_y : integer := frame'length(1);
+			variable min_x : integer := frame'length(2);
 		begin
 			assert vertices'length mod 2 = 0 report "Array of vertices passed to drawPolygon must have an even length!" severity failure;
 			-- Bounding box of polygon
@@ -331,14 +372,12 @@ package body vhdldraw_pkg is
 			fillPolygon((x0, y0, x1, y1, x2, y2));
 		end procedure;
 
-		procedure fillRectangle(x, y : integer; width, height : natural) is
-			constant endrow : natural := max(min(y + height, frame'length(1)), 0);
-			constant endcol : natural := max(min(x + width, frame'length(2)), 0);
+		procedure fillRectangle(x, y : integer; width, height : integer) is
 		begin
-			fillPolygon((x,y, x+width,y, x+width,y+height, x,y+height));
+			fillPolygon((x,y, x+width-1,y, x+width-1,y+height-1, x,y+height-1));
 		end procedure;
 
-		procedure fillSquare(x, y : integer; size : natural) is
+		procedure fillSquare(x, y : integer; size : integer) is
 		begin
 			fillRectangle(x, y, size, size);
 		end procedure;
@@ -375,14 +414,14 @@ package body vhdldraw_pkg is
 			writeline(f_img, img_line);
 			swrite(img_line, to_string(width) & " " & to_string(height));
 			writeline(f_img, img_line);
-			swrite(img_line, "255");
+			swrite(img_line, to_string(2**8-1));
 			writeline(f_img, img_line);
 			for y in 0 to height-1 loop
 				for x in 0 to width-1 loop
 					c := frame(y, x);
-					r := integer(real(c.red) * 36.429);
-					g := integer(real(c.green) * 36.429);
-					b := integer(real(c.blue) * 85.0);
+					r := to_integer(c.red);
+					g := to_integer(c.green);
+					b := to_integer(c.blue);
 					if x /= 0 then
 						swrite(img_line, "  ");
 					end if;
