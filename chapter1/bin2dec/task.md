@@ -19,7 +19,7 @@ end component;
 
 **Important**: You are not allowed to change the component's interface, and you are not supposed to add generics.
 
-For example, if the input `bin_in` is "1101_1011" then `dec_out` shall output 219 and `bcd_out` "0000_0010_0001_1001"
+For example, if the input `bin_in` is "1101_1011" then `dec_out` shall output 219 and `bcd_out` "0010_0001_1001"
 
 For the binary to integer conversion, you are **not** allowed to use the built-in conversion function `to_integer`.
 You must implement the conversion yourself and write the result to the `dec_out` vector.
