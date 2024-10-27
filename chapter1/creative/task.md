@@ -13,3 +13,5 @@ You can program whatever **you** want to as long as you adhere to a few requirem
 - You must implement and use at least one subprogram.
 
 You get the point for this task if your submission adheres to the above requirements and it is obvious that this is an honest attempt of you engaging with VHDL.
+
+[Return to main page](../../readme.md)

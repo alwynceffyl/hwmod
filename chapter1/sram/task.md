@@ -30,3 +30,6 @@ Generate a wave file for the QuestaSim waveform viewer such that all accesses ar
 - Make use of the timing constants in the [sram_pkg](src/sram_pkg.vhd). You can find their meaning on datasheet pages 9 (for read cycles) and 12 (for write cycles).
 
 - Note that the `IO` port of the `sram` entity is of mode `inout`. Thus reads and writes happen via this port. Ensure that you apply a suitable value in your testbench during reads.
+
+
+[Return to main page](../../readme.md)

@@ -16,3 +16,6 @@ After you implemented your full adder it is time to test it.
 We already provide you with a testbench skeleton file for that purpose at [fa_tb.vhd](tb/fa_tb.vhd).
 Do so by writing a testbench that exhaustively applies all possible input values.
 Use the waveform viewer of QuestaSim to view the signal traces and check if they are correct.
+
+
+[Return to main page](../../../readme.md)

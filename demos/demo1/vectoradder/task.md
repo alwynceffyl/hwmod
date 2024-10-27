@@ -18,3 +18,5 @@ Your testbench shall exhaustively test all possible combinations for 8-bit wide 
 Use an `assert` statement to automatically check whether the adder is correct.
 
 Furthermore, use the waveform viewer of QuestaSim to view the signal traces of your testbench.
+
+[Return to main page](../../../readme.md)

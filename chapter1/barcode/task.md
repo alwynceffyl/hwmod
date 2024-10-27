@@ -51,3 +51,6 @@ Code-128B
 ![Code B Annotated](.mdata/barcodeB.svg)
 
 Of course, you can also scan your generated barcodes with your phone and favorite barcode scan app or use an online barcode reader to check the images you generate (especially useful for longer codes).
+
+
+[Return to main page](../../readme.md)

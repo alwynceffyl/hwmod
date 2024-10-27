@@ -60,3 +60,6 @@ For a greyscale color palette start with the value 220 for red, green and blue a
 - Make sure that at each cross the black rectangle is drawn on above the white one.
 
 ![checkerboard](.mdata/checkerboard.png)
+
+
+[Return to main page](../../readme.md)

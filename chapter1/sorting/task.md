@@ -44,3 +44,5 @@ variable arr2 : int_arr_t(5 downto 0) := (-10, -11, -12, -13, -17, -22);
 
 **Remark**: Naturally the graphical output can hardly handle arbitrary long arrays.
 However, make sure that the drawing works for arrays of a length of up to 199 (this allows you to still observe the bar colors with the pre-defined frame width of 400 pixels).
+
+[Return to main page](../../readme.md)

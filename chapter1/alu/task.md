@@ -53,3 +53,5 @@ The variable `x` used in the table must be derived from the `DATA_WIDTH` generic
 Make sure that your `alu` is implemented correctly. For that purpose you can use the [alu_tb](tb/alu_tb.vhd) testbench skeleton.
 
 After the submission we will test your code in order to find bugs.
+
+[Return to main page](../../readme.md)
