@@ -1,0 +1,159 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+!s11e vcom 2022.4 2022.10, Oct 18 2022
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/homes/m12207461/Desktop/gitlab/hwmod_ws2024/lib/vhdldraw
+T_opt
+!s110 1730301888
+VJ=XJhLQJ5;1gHK2fbkPf_3
+04 7 3 work example beh 1
+=1-000ae431a4f1-67224fbf-f185f-144acc
+R0
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OE;O;2022.4;75
+Eexample
+Z2 w1730194630
+Z3 DPx4 work 8 math_pkg 0 22 6o3iO_9IOLbIM`>0_K1dl3
+Z4 DPx4 ieee 16 std_logic_textio 0 22 C8j>g0lzF^EAA]5<S6PY32
+Z5 DPx4 work 12 vhdldraw_pkg 0 22 [aF=I9593:m>WAg@]H3S71
+Z6 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
+Z7 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z8 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 2
+R1
+Z9 8tb/example.vhd
+Z10 Ftb/example.vhd
+l0
+L7 1
+VL=16GQIHJ=lV0dGhNM=2I0
+!s100 aBg2[oDcA<23IWk>1]a@b1
+Z11 OE;C;2022.4;75
+33
+Z12 !s110 1730301859
+!i10b 1
+Z13 !s108 1730301859.000000
+Z14 !s90 -O0|-check_synthesis|-2008|-work|work|-suppress|1236|tb/example.vhd|
+Z15 !s107 tb/example.vhd|
+!i113 0
+Z16 o-suppress 1236 -O0 -check_synthesis -2008 -work work
+Z17 tExplicit 1 CvgOpt 0
+Abeh
+R3
+R4
+R5
+R6
+R7
+R8
+DEx4 work 7 example 0 22 L=16GQIHJ=lV0dGhNM=2I0
+!i122 2
+l11
+L10 93
+VhEdSYTC49jzLaeM[S6A@41
+!s100 L1>;f=m]WclF]3][5F@I=3
+R11
+33
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+R17
+Pmath_pkg
+!i122 0
+R2
+R1
+Z18 8../math/src/math_pkg.vhd
+Z19 F../math/src/math_pkg.vhd
+l0
+L2 8
+V6o3iO_9IOLbIM`>0_K1dl3
+!s100 7GO4c4HB>Y__ScgGN3ZXo2
+R11
+33
+b1
+R12
+!i10b 1
+R13
+Z20 !s90 -O0|-check_synthesis|-2008|-work|work|-suppress|1236|../math/src/math_pkg.vhd|
+Z21 !s107 ../math/src/math_pkg.vhd|
+!i113 0
+R16
+R17
+Bbody
+R3
+!i122 0
+l0
+L11 61
+VnZUPg`Y@B>LoN?b@VaKe=3
+!s100 5=fb5fRCGmVbPOI82;zFC1
+R11
+33
+R12
+!i10b 1
+R13
+R20
+R21
+!i113 0
+R16
+R17
+Pvhdldraw_pkg
+R3
+R4
+R6
+R7
+R8
+!i122 1
+R2
+R1
+Z22 8src/vhdldraw_pkg.vhd
+Z23 Fsrc/vhdldraw_pkg.vhd
+l0
+L10 62
+V[aF=I9593:m>WAg@]H3S71
+!s100 fLk6dVL`WzKmUM37Y=Pn]3
+R11
+33
+b1
+R12
+!i10b 1
+R13
+Z24 !s90 -O0|-check_synthesis|-2008|-work|work|-suppress|1236|src/vhdldraw_pkg.vhd|
+Z25 !s107 src/vhdldraw_pkg.vhd|
+!i113 0
+R16
+R17
+Bbody
+R5
+R3
+R4
+R6
+R7
+R8
+!i122 1
+l0
+L73 364
+VUzJKmb73ZiTYoR^[4Vb`P2
+!s100 ^JIZH82:Z>AdFJLAUiad92
+R11
+33
+R12
+!i10b 1
+R13
+R24
+R25
+!i113 0
+R16
+R17

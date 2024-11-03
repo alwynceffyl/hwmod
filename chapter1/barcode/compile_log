@@ -1,0 +1,50 @@
+** Warning: (vlib-34) Library already exists at "work".
+Errors: 0, Warnings: 1
+QuestaSim vcom 2022.4 Compiler 2022.10 Oct 18 2022
+Start time: 13:09:05 on Oct 31,2024
+vcom -O0 -check_synthesis -2008 -work work -suppress 1236 ../../lib/math/src/math_pkg.vhd 
+-- Loading package STANDARD
+-- Compiling package math_pkg
+-- Compiling package body math_pkg
+-- Loading package math_pkg
+End time: 13:09:05 on Oct 31,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+QuestaSim vcom 2022.4 Compiler 2022.10 Oct 18 2022
+Start time: 13:09:05 on Oct 31,2024
+vcom -O0 -check_synthesis -2008 -work work -suppress 1236 ../../lib/vhdldraw/src/vhdldraw_pkg.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_textio
+-- Loading package math_pkg
+-- Compiling package vhdldraw_pkg
+-- Compiling package body vhdldraw_pkg
+-- Loading package vhdldraw_pkg
+End time: 13:09:05 on Oct 31,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+QuestaSim vcom 2022.4 Compiler 2022.10 Oct 18 2022
+Start time: 13:09:05 on Oct 31,2024
+vcom -O0 -check_synthesis -2008 -work work -suppress 1236 src/barcode_pkg.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package barcode_pkg
+End time: 13:09:05 on Oct 31,2024, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+QuestaSim vcom 2022.4 Compiler 2022.10 Oct 18 2022
+Start time: 13:09:05 on Oct 31,2024
+vcom -O0 -check_synthesis -2008 -work work -suppress 1236 src/barcode.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package math_pkg
+-- Loading package barcode_pkg
+-- Loading package std_logic_textio
+-- Loading package vhdldraw_pkg
+-- Compiling entity barcode
+-- Compiling architecture arch of barcode
+End time: 13:09:06 on Oct 31,2024, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0

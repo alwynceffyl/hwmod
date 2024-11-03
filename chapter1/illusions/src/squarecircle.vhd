@@ -8,8 +8,11 @@ begin
 	process is
 		constant size : natural := 600;
 		variable vhdldraw : vhdldraw_t;
-
-		-- you might want to add some auxiliary subprograms or constants / variables in here
+		constant squares : natural :=50;
+		constant space_between : natural :=5;
+		constant linewidth : natural := 2;
+		constant radius_circle : natural :=30;
+		constant radius_circle_lw : natural :=4;
 	begin
 		vhdldraw.init(size);
 

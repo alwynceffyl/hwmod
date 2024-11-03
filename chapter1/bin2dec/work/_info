@@ -1,0 +1,250 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11e vcom 2022.4 2022.10, Oct 18 2022
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/homes/m12207461/Desktop/gitlab/hwmod_ws2024/chapter1/bin2dec
+T_opt
+Z2 !s110 1730467761
+V:hg>8<Mdb7[cFiQhRcVG90
+04 10 4 work bin2dec_tb test 1
+=1-000ae431a4f1-6724d7b1-79cd7-215b8f
+R0
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OE;O;2022.4;75
+Ebin2dec
+Z3 w1730467717
+Z4 DPx4 work 11 bin2dec_pkg 0 22 VSCXBC?oWjZ2jX`dnW8VU0
+Z5 DPx4 work 8 math_pkg 0 22 6o3iO_9IOLbIM`>0_K1dl3
+Z6 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
+Z7 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z8 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 458
+R1
+Z9 8src/bin2dec.vhd
+Z10 Fsrc/bin2dec.vhd
+l0
+L8 1
+V?J_Nb1i>SRUB`UGdW75KW1
+!s100 BBF_UHn??=nV172gWHPz83
+Z11 OE;C;2022.4;75
+33
+Z12 !s110 1730467760
+!i10b 1
+Z13 !s108 1730467760.000000
+Z14 !s90 -O0|-check_synthesis|-2008|-work|work|-suppress|1236|src/bin2dec.vhd|
+Z15 !s107 src/bin2dec.vhd|
+!i113 0
+Z16 o-suppress 1236 -O0 -check_synthesis -2008 -work work
+Z17 tExplicit 1 CvgOpt 0
+Abeh
+R4
+R5
+R6
+R7
+R8
+Z18 DEx4 work 7 bin2dec 0 22 ?J_Nb1i>SRUB`UGdW75KW1
+!i122 458
+l18
+L16 35
+V^KFR:PZ`h7e>T6:K2Vbah0
+!s100 z;DZAICM0KU7W?5QX?L6G1
+R11
+33
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+R17
+Pbin2dec_pkg
+R7
+R8
+!i122 457
+Z19 w1730194630
+R1
+8src/bin2dec_pkg.vhd
+Fsrc/bin2dec_pkg.vhd
+l0
+L4 9
+VVSCXBC?oWjZ2jX`dnW8VU0
+!s100 nV:3NIXP5_Jn3<feTD@m]3
+R11
+33
+R12
+!i10b 1
+R13
+!s90 -O0|-check_synthesis|-2008|-work|work|-suppress|1236|src/bin2dec_pkg.vhd|
+!s107 src/bin2dec_pkg.vhd|
+!i113 0
+R16
+R17
+Ebin2dec_tb
+Z20 w1730467758
+R4
+R5
+Z21 DPx4 ieee 9 math_real 0 22 :8NNHF3SFI6^on5?4X[S`1
+R6
+R7
+R8
+!i122 459
+R1
+Z22 8tb/bin2dec_tb.vhd
+Z23 Ftb/bin2dec_tb.vhd
+l0
+L9 1
+Vg0UT;VNDXOm3:=>ag^L`n1
+!s100 Jzb6QJgC6_4B9fE?C?K6J0
+R11
+33
+R2
+!i10b 1
+R13
+Z24 !s90 -O0|-check_synthesis|-2008|-work|work|-suppress|1236|tb/bin2dec_tb.vhd|
+Z25 !s107 tb/bin2dec_tb.vhd|
+!i113 0
+R16
+R17
+Atest
+R18
+R4
+R5
+R21
+R6
+R7
+R8
+Z26 DEx4 work 10 bin2dec_tb 0 22 g0UT;VNDXOm3:=>ag^L`n1
+!i122 459
+l18
+L13 23
+VYoZUYCD_gLa37lF3fMbhf3
+!s100 m2OICzkB7=fjX?X05L5UX3
+R11
+33
+R2
+!i10b 1
+R13
+R24
+R25
+!i113 0
+R16
+R17
+Atb
+R4
+R5
+R21
+R6
+R7
+R8
+R26
+!i122 23
+l13
+L12 11
+V0:KD2b_P`@U]mg:LFl_P;1
+!s100 BeZHn66m;e35R35X_GL3<2
+R11
+33
+!s110 1730377056
+!i10b 1
+!s108 1730377056.000000
+R24
+R25
+!i113 0
+R16
+R17
+w1730377036
+Pmath_pkg
+!i122 456
+R19
+R1
+Z27 8../../lib/math/src/math_pkg.vhd
+Z28 F../../lib/math/src/math_pkg.vhd
+l0
+L2 8
+V6o3iO_9IOLbIM`>0_K1dl3
+!s100 7GO4c4HB>Y__ScgGN3ZXo2
+R11
+33
+b1
+R12
+!i10b 1
+R13
+Z29 !s90 -O0|-check_synthesis|-2008|-work|work|-suppress|1236|../../lib/math/src/math_pkg.vhd|
+Z30 !s107 ../../lib/math/src/math_pkg.vhd|
+!i113 0
+R16
+R17
+Bbody
+R5
+!i122 456
+l0
+L11 61
+VnZUPg`Y@B>LoN?b@VaKe=3
+!s100 5=fb5fRCGmVbPOI82;zFC1
+R11
+33
+R12
+!i10b 1
+R13
+R29
+R30
+!i113 0
+R16
+R17

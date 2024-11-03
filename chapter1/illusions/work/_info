@@ -1,0 +1,472 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11e vcom 2022.4 2022.10, Oct 18 2022
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/homes/m12207461/Desktop/gitlab/hwmod_ws2024/chapter1/illusions
+T_opt
+!s110 1730301783
+Vb9]mNkR>3PdUF8en0A1DO2
+Z2 04 9 4 work illusions arch 1
+=1-000ae431a4f1-67224f57-1dbd3-144681
+R0
+Z3 !s12b OEM100
+Z4 !s124 OEM100
+Z5 o-quiet -auto_acc_if_foreign -work work
+Z6 tCvgOpt 0
+n@_opt
+Z7 OE;O;2022.4;75
+T_opt1
+!s110 1730276193
+VN`NLO;gCfUg:Y5>E5WHga0
+R2
+=1-000ae431a4f1-6721eb61-2bf27-115331
+R0
+R3
+R4
+R5
+R6
+n@_opt1
+R7
+R1
+Echeckerboard
+Z8 w1730194630
+Z9 DPx4 work 8 math_pkg 0 22 6o3iO_9IOLbIM`>0_K1dl3
+Z10 DPx4 ieee 16 std_logic_textio 0 22 C8j>g0lzF^EAA]5<S6PY32
+Z11 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
+Z12 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z13 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+Z14 DPx4 work 12 vhdldraw_pkg 0 22 [aF=I9593:m>WAg@]H3S71
+!i122 912
+R1
+Z15 8src/checkerboard.vhd
+Z16 Fsrc/checkerboard.vhd
+l0
+L3 1
+Ve[i2>3HS:<D>^lnm9AY7l0
+!s100 UaY_<C`fl8;RmG5m_2LCA1
+Z17 OE;C;2022.4;75
+33
+Z18 !s110 1730301782
+!i10b 1
+Z19 !s108 1730301782.000000
+Z20 !s90 -O0|-check_synthesis|-2008|-work|work|-suppress|1236|src/checkerboard.vhd|
+Z21 !s107 src/checkerboard.vhd|
+!i113 0
+Z22 o-suppress 1236 -O0 -check_synthesis -2008 -work work
+Z23 tExplicit 1 CvgOpt 0
+Aarch
+R9
+R10
+R11
+R12
+R13
+R14
+Z24 DEx4 work 12 checkerboard 0 22 e[i2>3HS:<D>^lnm9AY7l0
+!i122 912
+l7
+L6 21
+VXj>mEzfJV<b5gUJccZXON3
+!s100 7JeK[<_`NdLjHkl>n`4eR2
+R17
+33
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Econcentric
+Z25 w1730301780
+R9
+R10
+R11
+R12
+R13
+R14
+!i122 914
+R1
+Z26 8src/concentric.vhd
+Z27 Fsrc/concentric.vhd
+l0
+L3 1
+VclMZP0<9E4A@]=jM:8idb2
+!s100 RYQ3TEa5=9[fL`L6h>EFM1
+R17
+33
+R18
+!i10b 1
+R19
+Z28 !s90 -O0|-check_synthesis|-2008|-work|work|-suppress|1236|src/concentric.vhd|
+Z29 !s107 src/concentric.vhd|
+!i113 0
+R22
+R23
+Aarch
+R9
+R10
+R11
+R12
+R13
+R14
+Z30 DEx4 work 10 concentric 0 22 clMZP0<9E4A@]=jM:8idb2
+!i122 914
+l7
+L6 70
+V>USZ^8`iiRW==G9EF=MQN2
+!s100 ;SdK<5GiBQ>zAFH=O<>991
+R17
+33
+R18
+!i10b 1
+R19
+R28
+R29
+!i113 0
+R22
+R23
+Eillusions
+R8
+R9
+R10
+R11
+R12
+R13
+R14
+!i122 916
+R1
+Z31 8src/illusions.vhd
+Z32 Fsrc/illusions.vhd
+l0
+L3 1
+V7UMHX4GV:[Gg1MiB[[8Z02
+!s100 =df3LVjboXU`<:@[Xdb=i2
+R17
+33
+R18
+!i10b 1
+R19
+Z33 !s90 -O0|-check_synthesis|-2008|-work|work|-suppress|1236|src/illusions.vhd|
+Z34 !s107 src/illusions.vhd|
+!i113 0
+R22
+R23
+Aarch
+Z35 DEx4 work 12 squarecircle 0 22 M:CAYYR4Z^Z]zWabW`PK>1
+R30
+Z36 DEx4 work 5 ouchi 0 22 ?JC6Nlg]lGez85[5nh2130
+R24
+R9
+R10
+R11
+R12
+R13
+R14
+DEx4 work 9 illusions 0 22 7UMHX4GV:[Gg1MiB[[8Z02
+!i122 916
+l8
+L7 9
+V^A=VU9H@]W2I3UD:;N::N1
+!s100 5HDZ0OzW1>0SAo:@^NIoz3
+R17
+33
+R18
+!i10b 1
+R19
+R33
+R34
+!i113 0
+R22
+R23
+Pmath_pkg
+!i122 910
+R8
+R1
+Z37 8../../lib/math/src/math_pkg.vhd
+Z38 F../../lib/math/src/math_pkg.vhd
+l0
+L2 8
+V6o3iO_9IOLbIM`>0_K1dl3
+!s100 7GO4c4HB>Y__ScgGN3ZXo2
+R17
+33
+b1
+R18
+!i10b 1
+R19
+Z39 !s90 -O0|-check_synthesis|-2008|-work|work|-suppress|1236|../../lib/math/src/math_pkg.vhd|
+Z40 !s107 ../../lib/math/src/math_pkg.vhd|
+!i113 0
+R22
+R23
+Bbody
+R9
+!i122 910
+l0
+L11 61
+VnZUPg`Y@B>LoN?b@VaKe=3
+!s100 5=fb5fRCGmVbPOI82;zFC1
+R17
+33
+R18
+!i10b 1
+R19
+R39
+R40
+!i113 0
+R22
+R23
+Eouchi
+Z41 w1730273344
+R9
+R10
+R11
+R12
+R13
+R14
+!i122 913
+R1
+Z42 8src/ouchi.vhd
+Z43 Fsrc/ouchi.vhd
+l0
+L3 1
+V?JC6Nlg]lGez85[5nh2130
+!s100 PEWGInBeDlQKG<LjkY=>F0
+R17
+33
+R18
+!i10b 1
+R19
+Z44 !s90 -O0|-check_synthesis|-2008|-work|work|-suppress|1236|src/ouchi.vhd|
+Z45 !s107 src/ouchi.vhd|
+!i113 0
+R22
+R23
+Aarch
+R9
+R10
+R11
+R12
+R13
+R14
+R36
+!i122 913
+l7
+L6 63
+VL>^C`mIlEzMbYCfDPG[602
+!s100 mSVZ4]D7G]RzomDZ7J>nl3
+R17
+33
+R18
+!i10b 1
+R19
+R44
+R45
+!i113 0
+R22
+R23
+Esquarecircle
+Z46 w1730202243
+R9
+R10
+R11
+R12
+R13
+R14
+!i122 915
+R1
+Z47 8src/squarecircle.vhd
+Z48 Fsrc/squarecircle.vhd
+l0
+L3 1
+VM:CAYYR4Z^Z]zWabW`PK>1
+!s100 MjgC9Zn_Uc8A92IGTSY]e0
+R17
+33
+R18
+!i10b 1
+R19
+Z49 !s90 -O0|-check_synthesis|-2008|-work|work|-suppress|1236|src/squarecircle.vhd|
+Z50 !s107 src/squarecircle.vhd|
+!i113 0
+R22
+R23
+Aarch
+R9
+R10
+R11
+R12
+R13
+R14
+R35
+!i122 915
+l7
+L6 20
+V]jl<B^TZ@zjk@VGPCgQ8R3
+!s100 d<4n140Iz5YDQ]P>jNLER2
+R17
+33
+R18
+!i10b 1
+R19
+R49
+R50
+!i113 0
+R22
+R23
+Pvhdldraw_pkg
+R9
+R10
+R11
+R12
+R13
+!i122 911
+R8
+R1
+Z51 8../../lib/vhdldraw/src/vhdldraw_pkg.vhd
+Z52 F../../lib/vhdldraw/src/vhdldraw_pkg.vhd
+l0
+L10 62
+V[aF=I9593:m>WAg@]H3S71
+!s100 fLk6dVL`WzKmUM37Y=Pn]3
+R17
+33
+b1
+R18
+!i10b 1
+R19
+Z53 !s90 -O0|-check_synthesis|-2008|-work|work|-suppress|1236|../../lib/vhdldraw/src/vhdldraw_pkg.vhd|
+Z54 !s107 ../../lib/vhdldraw/src/vhdldraw_pkg.vhd|
+!i113 0
+R22
+R23
+Bbody
+R14
+R9
+R10
+R11
+R12
+R13
+!i122 911
+l0
+L73 364
+VUzJKmb73ZiTYoR^[4Vb`P2
+!s100 ^JIZH82:Z>AdFJLAUiad92
+R17
+33
+R18
+!i10b 1
+R19
+R53
+R54
+!i113 0
+R22
+R23

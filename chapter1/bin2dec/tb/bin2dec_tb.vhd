@@ -9,14 +9,27 @@ use work.bin2dec_pkg.all;
 entity bin2dec_tb is
 end entity;
 
-architecture tb of bin2dec_tb is
+
+architecture test of bin2dec_tb is
+	constant CONSTRAINED : natural :=8;
+	signal bin_in   :   std_ulogic_vector(CONSTRAINED-1 downto 0);
+	signal dec_out  :  integer;
+	signal bcd_out  :  std_ulogic_vector(log10c(2**(CONSTRAINED +1))*4 -1 downto 0);
 begin
+	uut : entity work.bin2dec
+	port map (
+		bin_in => bin_in,
+		dec_out => dec_out,
+		bcd_out => bcd_out
+	);
 
 	stimuli : process
 	begin
-		-- apply your stimulus here
-		-- This is just a template - adjust to your needs!
-		-- report to_string(bin_in) & " is decimal:" & to_string(dec_out) & " is BCD " & to_string(bcd_out);
+	report "here it begins";
+		bin_in <= std_ulogic_vector(to_unsigned(249, CONSTRAINED));
+		wait for 10 ns;
+		report "dec_out:=" & to_string(dec_out);
+		report "bdc_out:=" & to_string(bcd_out);
 		wait;
 	end process;
 end architecture;

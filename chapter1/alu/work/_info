@@ -1,0 +1,224 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11e vcom 2022.4 2022.10, Oct 18 2022
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/homes/m12207461/Desktop/gitlab/hwmod_ws2024/chapter1/alu
+T_opt
+!s110 1730370972
+VaK_0ZIkE3XlaE7?1^G0MN0
+04 6 4 work alu_tb test 1
+=1-000ae431a4f1-67235d9c-954b5-1d6242
+R0
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work
+tCvgOpt 0
+n@_opt
+OE;O;2022.4;75
+R1
+Ealu
+Z2 w1730370589
+Z3 DPx4 work 7 alu_pkg 0 22 ihVdCBWn:gkci[FIa[[_Q3
+Z4 DPx4 work 8 math_pkg 0 22 6o3iO_9IOLbIM`>0_K1dl3
+Z5 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
+Z6 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z7 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 314
+R1
+Z8 8src/alu.vhd
+Z9 Fsrc/alu.vhd
+l0
+L8 1
+VdT;:>6nlR;NLf8hF;MJBc3
+!s100 Zca<2_k0:]R2``aLd>I]G1
+Z10 OE;C;2022.4;75
+33
+Z11 !s110 1730371015
+!i10b 1
+Z12 !s108 1730371015.000000
+Z13 !s90 -O0|-check_synthesis|-2008|-work|work|-suppress|1236|src/alu.vhd|
+Z14 !s107 src/alu.vhd|
+!i113 0
+Z15 o-suppress 1236 -O0 -check_synthesis -2008 -work work
+Z16 tExplicit 1 CvgOpt 0
+Aalu_beh
+R3
+R4
+R5
+R6
+R7
+Z17 DEx4 work 3 alu 0 22 dT;:>6nlR;NLf8hF;MJBc3
+!i122 314
+l22
+L20 57
+VbnGO3AK79Cf1T^AEk6=0J2
+!s100 g51G<ITkPd8QT4T;5dRD`3
+R10
+33
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 0
+R15
+R16
+Palu_pkg
+R6
+R7
+!i122 313
+Z18 w1730194630
+R1
+8src/alu_pkg.vhd
+Fsrc/alu_pkg.vhd
+l0
+L4 27
+VihVdCBWn:gkci[FIa[[_Q3
+!s100 =2A<E2h?6a[lGVJ`0e?A]0
+R10
+33
+R11
+!i10b 1
+R12
+!s90 -O0|-check_synthesis|-2008|-work|work|-suppress|1236|src/alu_pkg.vhd|
+!s107 src/alu_pkg.vhd|
+!i113 0
+R15
+R16
+Ealu_tb
+Z19 w1730371013
+R3
+R4
+Z20 DPx4 ieee 9 math_real 0 22 :8NNHF3SFI6^on5?4X[S`1
+R5
+R6
+R7
+!i122 315
+R1
+Z21 8tb/alu_tb.vhd
+Z22 Ftb/alu_tb.vhd
+l0
+L9 1
+VhPfI6VGGf;PYX_^4dZD@F0
+!s100 F3lhj35UWnWf=Rf`_XCJn3
+R10
+33
+R11
+!i10b 1
+R12
+Z23 !s90 -O0|-check_synthesis|-2008|-work|work|-suppress|1236|tb/alu_tb.vhd|
+Z24 !s107 tb/alu_tb.vhd|
+!i113 0
+R15
+R16
+Atest
+R17
+R3
+R4
+R20
+R5
+R6
+R7
+Z25 DEx4 work 6 alu_tb 0 22 hPfI6VGGf;PYX_^4dZD@F0
+!i122 311
+l18
+L12 40
+VobnZOBT2jJ<]Cf5WgM:H11
+!s100 L6BlmGSYX;:FO7o]Y[P6P1
+R10
+33
+!s110 1730370971
+!i10b 1
+!s108 1730370971.000000
+R23
+R24
+!i113 0
+R15
+R16
+Atb
+R17
+R3
+R4
+R20
+R5
+R6
+R7
+R25
+!i122 143
+l18
+L12 29
+V6dPiS71=:kH0JZ^Ck>7:B3
+!s100 M5P<Xo<R<h`nE:FT7:HSI2
+R10
+33
+!s110 1730368954
+!i10b 1
+!s108 1730368954.000000
+R23
+R24
+!i113 0
+R15
+R16
+w1730368953
+Pmath_pkg
+!i122 312
+R18
+R1
+Z26 8../../lib/math/src/math_pkg.vhd
+Z27 F../../lib/math/src/math_pkg.vhd
+l0
+L2 8
+V6o3iO_9IOLbIM`>0_K1dl3
+!s100 7GO4c4HB>Y__ScgGN3ZXo2
+R10
+33
+b1
+R11
+!i10b 1
+R12
+Z28 !s90 -O0|-check_synthesis|-2008|-work|work|-suppress|1236|../../lib/math/src/math_pkg.vhd|
+Z29 !s107 ../../lib/math/src/math_pkg.vhd|
+!i113 0
+R15
+R16
+Bbody
+R4
+!i122 312
+l0
+L11 61
+VnZUPg`Y@B>LoN?b@VaKe=3
+!s100 5=fb5fRCGmVbPOI82;zFC1
+R10
+33
+R11
+!i10b 1
+R12
+R28
+R29
+!i113 0
+R15
+R16
