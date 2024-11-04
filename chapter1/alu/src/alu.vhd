@@ -19,8 +19,12 @@ end entity;
 
 architecture alu_beh of alu is
 	constant x : natural := log2c(DATA_WIDTH);
+
+	
+
+
 begin
-	alu: process(all) begin
+	process(all) begin
 		
 	case op is 
 		when ALU_NOP => 
@@ -28,7 +32,7 @@ begin
 			z <= '-';
 
 		when ALU_SLT => 
-			r <= ( std_ulogic_vector(to_unsigned(1, DATA_WIDTH))) when signed(a)< signed(b) else (others => '0');
+			r <= (std_ulogic_vector(to_unsigned(1, DATA_WIDTH))) when signed(a)< signed(b) else (others => '0');
 			z <= not r(0);
 		
 		when ALU_SLTU =>

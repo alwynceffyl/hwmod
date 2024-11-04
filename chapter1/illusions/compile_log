@@ -1,16 +1,14 @@
-** Warning: (vlib-34) Library already exists at "work".
-Errors: 0, Warnings: 1
 QuestaSim vcom 2022.4 Compiler 2022.10 Oct 18 2022
-Start time: 16:23:02 on Oct 30,2024
+Start time: 15:59:03 on Nov 04,2024
 vcom -O0 -check_synthesis -2008 -work work -suppress 1236 ../../lib/math/src/math_pkg.vhd 
 -- Loading package STANDARD
 -- Compiling package math_pkg
 -- Compiling package body math_pkg
 -- Loading package math_pkg
-End time: 16:23:02 on Oct 30,2024, Elapsed time: 0:00:00
+End time: 15:59:07 on Nov 04,2024, Elapsed time: 0:00:04
 Errors: 0, Warnings: 0
 QuestaSim vcom 2022.4 Compiler 2022.10 Oct 18 2022
-Start time: 16:23:02 on Oct 30,2024
+Start time: 15:59:07 on Nov 04,2024
 vcom -O0 -check_synthesis -2008 -work work -suppress 1236 ../../lib/vhdldraw/src/vhdldraw_pkg.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -21,10 +19,10 @@ vcom -O0 -check_synthesis -2008 -work work -suppress 1236 ../../lib/vhdldraw/src
 -- Compiling package vhdldraw_pkg
 -- Compiling package body vhdldraw_pkg
 -- Loading package vhdldraw_pkg
-End time: 16:23:02 on Oct 30,2024, Elapsed time: 0:00:00
+End time: 15:59:09 on Nov 04,2024, Elapsed time: 0:00:02
 Errors: 0, Warnings: 0
 QuestaSim vcom 2022.4 Compiler 2022.10 Oct 18 2022
-Start time: 16:23:02 on Oct 30,2024
+Start time: 15:59:09 on Nov 04,2024
 vcom -O0 -check_synthesis -2008 -work work -suppress 1236 src/checkerboard.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -35,10 +33,10 @@ vcom -O0 -check_synthesis -2008 -work work -suppress 1236 src/checkerboard.vhd
 -- Loading package vhdldraw_pkg
 -- Compiling entity checkerboard
 -- Compiling architecture arch of checkerboard
-End time: 16:23:02 on Oct 30,2024, Elapsed time: 0:00:00
+End time: 15:59:11 on Nov 04,2024, Elapsed time: 0:00:02
 Errors: 0, Warnings: 0
 QuestaSim vcom 2022.4 Compiler 2022.10 Oct 18 2022
-Start time: 16:23:02 on Oct 30,2024
+Start time: 15:59:11 on Nov 04,2024
 vcom -O0 -check_synthesis -2008 -work work -suppress 1236 src/ouchi.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -49,10 +47,10 @@ vcom -O0 -check_synthesis -2008 -work work -suppress 1236 src/ouchi.vhd
 -- Loading package vhdldraw_pkg
 -- Compiling entity ouchi
 -- Compiling architecture arch of ouchi
-End time: 16:23:02 on Oct 30,2024, Elapsed time: 0:00:00
+End time: 15:59:14 on Nov 04,2024, Elapsed time: 0:00:03
 Errors: 0, Warnings: 0
 QuestaSim vcom 2022.4 Compiler 2022.10 Oct 18 2022
-Start time: 16:23:02 on Oct 30,2024
+Start time: 15:59:14 on Nov 04,2024
 vcom -O0 -check_synthesis -2008 -work work -suppress 1236 src/concentric.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -63,10 +61,10 @@ vcom -O0 -check_synthesis -2008 -work work -suppress 1236 src/concentric.vhd
 -- Loading package vhdldraw_pkg
 -- Compiling entity concentric
 -- Compiling architecture arch of concentric
-End time: 16:23:02 on Oct 30,2024, Elapsed time: 0:00:00
+End time: 15:59:16 on Nov 04,2024, Elapsed time: 0:00:02
 Errors: 0, Warnings: 0
 QuestaSim vcom 2022.4 Compiler 2022.10 Oct 18 2022
-Start time: 16:23:02 on Oct 30,2024
+Start time: 15:59:16 on Nov 04,2024
 vcom -O0 -check_synthesis -2008 -work work -suppress 1236 src/squarecircle.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -77,10 +75,10 @@ vcom -O0 -check_synthesis -2008 -work work -suppress 1236 src/squarecircle.vhd
 -- Loading package vhdldraw_pkg
 -- Compiling entity squarecircle
 -- Compiling architecture arch of squarecircle
-End time: 16:23:02 on Oct 30,2024, Elapsed time: 0:00:00
+End time: 15:59:18 on Nov 04,2024, Elapsed time: 0:00:02
 Errors: 0, Warnings: 0
 QuestaSim vcom 2022.4 Compiler 2022.10 Oct 18 2022
-Start time: 16:23:02 on Oct 30,2024
+Start time: 15:59:18 on Nov 04,2024
 vcom -O0 -check_synthesis -2008 -work work -suppress 1236 src/illusions.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -95,5 +93,5 @@ vcom -O0 -check_synthesis -2008 -work work -suppress 1236 src/illusions.vhd
 -- Loading entity ouchi
 -- Loading entity concentric
 -- Loading entity squarecircle
-End time: 16:23:02 on Oct 30,2024, Elapsed time: 0:00:00
+End time: 15:59:21 on Nov 04,2024, Elapsed time: 0:00:03
 Errors: 0, Warnings: 0

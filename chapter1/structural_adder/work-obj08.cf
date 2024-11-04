@@ -1,0 +1,24 @@
+v 4
+file . "tb/adder4_tb.vhd" "2b16cdb678b5dcca66ef89853ef7bb7c3e5e37a1" "20241104164546.037":
+  entity adder4_tb at 1( 0) + 0 on 93;
+  architecture tb of adder4_tb at 9( 128) + 0 on 94;
+file . "src/adder4.vhd" "74b3e1772721341b25176034d9e10b48ff9d4b62" "20241104164544.169":
+  entity adder4 at 1( 0) + 0 on 91;
+  architecture arch of adder4 at 16( 290) + 0 on 92;
+file . "src/halfadder.vhd" "5b9d27f9481256b545bfbe398a0e206ed388fdb1" "20241104164540.015":
+  entity halfadder at 1( 0) + 0 on 87;
+  architecture beh of halfadder at 15( 206) + 0 on 88;
+file . "src/xor_gate.vhd" "cba91ed48eea2734f1e935b9e6f2717d99981f4a" "20241104164536.875":
+  entity xor_gate at 1( 0) + 0 on 83;
+  architecture beh of xor_gate at 14( 177) + 0 on 84;
+file . "src/adder4_pkg.vhd" "def75c000517b604b6abbbe471583ab17baddcbe" "20241104164533.558":
+  package adder4_pkg at 1( 0) + 0 on 80;
+file . "src/or_gate.vhd" "f030fe493c65876fa1dfda3fed46177d52d097f5" "20241104164535.279":
+  entity or_gate at 1( 0) + 0 on 81;
+  architecture beh of or_gate at 16( 178) + 0 on 82;
+file . "src/and_gate.vhd" "fe0701a8a0662cb50f03c4f5c23a0bb3df5de614" "20241104164538.479":
+  entity and_gate at 1( 0) + 0 on 85;
+  architecture beh of and_gate at 14( 177) + 0 on 86;
+file . "src/fulladder.vhd" "64c1e46d8649ce3e4d263823bfd70de3d25de519" "20241104164541.971":
+  entity fulladder at 1( 0) + 0 on 89;
+  architecture beh of fulladder at 16( 236) + 0 on 90;

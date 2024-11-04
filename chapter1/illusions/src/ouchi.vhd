@@ -46,7 +46,6 @@ begin
 		vhdldraw.setColor(WHITE);
 		vhdldraw.fillRectangle(x, y, figure_centre_w, figure_centre_h);
 		vhdldraw.setColor(BLACK);
-		--vhdldraw.drawRectangle(x, y, figure_centre_w, figure_centre_h);
 
 		while(y< small_windows_y) loop
 			while(x< small_windows_x) loop

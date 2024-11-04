@@ -1,0 +1,12 @@
+v 4
+file . "src/barcode.vhd" "4a3def282d46eb455d0e2a8a104c4435e26c7536" "20241104153635.764":
+  entity barcode at 1( 0) + 0 on 30;
+  architecture arch of barcode at 13( 202) + 0 on 31;
+file . "../../lib/vhdldraw/src/vhdldraw_pkg.vhd" "9c2f72084db087cded7ac930afa608d4de47edcd" "20241104153629.787":
+  package vhdldraw_pkg at 1( 0) + 0 on 27 body;
+  package body vhdldraw_pkg at 73( 2863) + 0 on 28;
+file . "../../lib/math/src/math_pkg.vhd" "459975d0c99420b26b3be3cd537b517e3a0c6678" "20241104153627.772":
+  package math_pkg at 2( 1) + 0 on 25 body;
+  package body math_pkg at 11( 448) + 0 on 26;
+file . "src/barcode_pkg.vhd" "12c398f02867c11233b71e98284499277b2b4603" "20241104153632.547":
+  package barcode_pkg at 1( 0) + 0 on 29;

@@ -13,4 +13,21 @@ entity adder4 is
 	);
 end entity;
 
--- implement adder4 architecture
+architecture arch of adder4 is
+	signal c : std_ulogic_vector(4 downto 0);
+begin
+	c(0) <= Cin;
+	Cout <= c(4);
+
+	gen1 : for i in 3 downto 0 generate
+		full1 : entity work.fulladder
+		port map (
+			A => A(i),
+			B => B(i),
+			Cin => c(i),
+			Sum => S(i),
+			Cout => c(i+1)
+		);
+	end generate;
+
+end arch ;

@@ -13,4 +13,31 @@ entity fulladder is
 	);
 end entity;
 
--- implement fulladder architecture
+architecture beh of fulladder is
+	signal x, y, z : std_ulogic;
+begin
+	ha1 : entity work.halfadder
+	port map (
+		A => A,
+	 	B=> B, 
+		Sum=> x, 
+		Cout => y 
+	);
+		
+	ha2 : entity work.halfadder
+	port map ( 
+		A => Cin,  
+		B=> x, 
+		Sum=> Sum, 
+		Cout => z 
+	);
+
+	hor1 : entity work.or_gate
+	port map (
+		A => z,
+		B => y, 
+		Z => Cout
+	);
+	
+	
+end architecture;

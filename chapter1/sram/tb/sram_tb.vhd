@@ -14,14 +14,34 @@ architecture tb of sram_tb is
 begin
 
 	stimulus : process is
+		
 		procedure read(addr : integer; variable data : out word_t) is
-		begin
-			-- Implement your read procedure that reads from address "addr" and writes the read data into "data"
-		end procedure;
+			begin
+				
+				A <= std_ulogic_vector(to_unsigned(addr, addr_t'length));
+				wait for TAA + 1 ns  ;
+				data := IO;
+				--wait for TRC - (TAA + 1 ns)  ;
+			end procedure;
+
+
 
 		procedure write(addr : integer; data : word_t) is
 		begin
-			-- Implement your write procedure that writes "data" to the address "addr"
+			OE_N <= '0';
+			wait for 10 ns;
+			A <= std_ulogic_vector(to_unsigned(addr, addr_t'length));
+			wait for TSA  ;
+			CE_N <= '0';
+			WE_N <= '0';
+			wait for THZWE;
+			IO <= data;
+			wait for TSD;
+			--   + TPWE2 - THZWE ;
+			CE_N <= '1';
+			WE_N <= '1';
+			wait for TLZWE ;
+			IO <= (others => 'Z');
 		end procedure;
 
 		variable read_data : word_t;
@@ -37,9 +57,20 @@ begin
 		LB_N <= '0';
 		UB_N <= '0';
 		wait for 20 ns;
+		
+		for i in 0 to testdata'length/16 -1 loop
+			write(i, testdata(16*i to 16*i +15));
+			wait for 10 ns;
+		end loop;
+		
+		CE_N <= '0';
+		OE_N <= '0';
+		wait for 100 ns;
 
-		-- write to and read from memory
-
+		for i in 0 to testdata'length/16 -1 loop	
+			read(i,read_data);
+			assert to_hstring(read_data) = to_hstring(testdata(16*i to 16*i +15)) report  "daten wurden falsch gelesen, sollte dies sein: " &  to_hstring(testdata(16*i to 16*i +15));
+		end loop;
 		wait;
 	end process;
 

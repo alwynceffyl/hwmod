@@ -5,7 +5,7 @@ end entity;
 
 architecture arch of creative is
 begin
-	main : process is
+	main : process is   -- process done
 		variable draw : vhdldraw_t;
 		constant width : natural := 1900;
 		constant height : natural := 1000;
@@ -19,7 +19,7 @@ begin
 		constant star_spacing_x : natural := 62;
 		constant star_spacing_y : natural := 50;
 		
-		procedure drawStar(draw : inout vhdldraw_t; start_x, start_y : natural) is
+		procedure drawStar(start_x, start_y : natural) is  --subprogram done
 		begin
 			draw.setColor(WHITE);
 			draw.drawPolygon((start_x, start_y + 10,
@@ -37,20 +37,25 @@ begin
 		draw.setLineWidth(2);
 		
 		draw.setColor(RED);
-		while(lines <= height) loop
-			if(counter mod 2 =0) then
-				draw.fillRectangle(0,lines, width, redwhitelines_h);
-			end if;
+		while(lines <= height) loop -- while loop done
+			case counter mod 2 is --different if/case done
+				when 0 =>
+					draw.fillRectangle(0,lines, width, redwhitelines_h);
+				when 1 =>
+					null ;
+				when others =>
+					null ;
+			end case; 
 			counter := counter+1;
 			lines := lines + redwhitelines_h;
 		end loop;
 		draw.setColor(BLUE);
 		draw.fillRectangle(0,0, 760, 538);
 		
-		for row in 0 to star_rows - 1 loop
+		for row in 0 to star_rows - 1 loop   --for loop done
 			for col in 0 to star_cols - 1 loop
-				if (row + col) mod 2 = 0 then  
-					drawStar(draw, col * star_spacing_x + 50, row * star_spacing_y + 30);
+				if (row + col) mod 2 = 0 then  		--different if/case done
+					drawStar( col * star_spacing_x + 50, row * star_spacing_y + 30);
 				end if;
 			end loop;
 		end loop;

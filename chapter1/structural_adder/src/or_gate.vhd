@@ -12,4 +12,11 @@ entity or_gate is
 end entity;
 
 
--- implement the or_gate architecture
+
+architecture beh of or_gate is
+	begin
+		Z <= (A or B);
+end architecture;
+	
+	
+	

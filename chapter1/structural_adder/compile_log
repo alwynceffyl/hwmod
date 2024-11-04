@@ -1,0 +1,92 @@
+QuestaSim vcom 2022.4 Compiler 2022.10 Oct 18 2022
+Start time: 17:29:28 on Nov 04,2024
+vcom -O0 -check_synthesis -2008 -work work -suppress 1236 src/adder4_pkg.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling package adder4_pkg
+End time: 17:29:32 on Nov 04,2024, Elapsed time: 0:00:04
+Errors: 0, Warnings: 0
+QuestaSim vcom 2022.4 Compiler 2022.10 Oct 18 2022
+Start time: 17:29:32 on Nov 04,2024
+vcom -O0 -check_synthesis -2008 -work work -suppress 1236 src/or_gate.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package adder4_pkg
+-- Compiling entity or_gate
+-- Compiling architecture beh of or_gate
+End time: 17:29:34 on Nov 04,2024, Elapsed time: 0:00:02
+Errors: 0, Warnings: 0
+QuestaSim vcom 2022.4 Compiler 2022.10 Oct 18 2022
+Start time: 17:29:34 on Nov 04,2024
+vcom -O0 -check_synthesis -2008 -work work -suppress 1236 src/xor_gate.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package adder4_pkg
+-- Compiling entity xor_gate
+-- Compiling architecture beh of xor_gate
+End time: 17:29:37 on Nov 04,2024, Elapsed time: 0:00:03
+Errors: 0, Warnings: 0
+QuestaSim vcom 2022.4 Compiler 2022.10 Oct 18 2022
+Start time: 17:29:37 on Nov 04,2024
+vcom -O0 -check_synthesis -2008 -work work -suppress 1236 src/and_gate.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package adder4_pkg
+-- Compiling entity and_gate
+-- Compiling architecture beh of and_gate
+End time: 17:29:40 on Nov 04,2024, Elapsed time: 0:00:03
+Errors: 0, Warnings: 0
+QuestaSim vcom 2022.4 Compiler 2022.10 Oct 18 2022
+Start time: 17:29:40 on Nov 04,2024
+vcom -O0 -check_synthesis -2008 -work work -suppress 1236 src/halfadder.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package adder4_pkg
+-- Compiling entity halfadder
+-- Compiling architecture beh of halfadder
+-- Loading entity and_gate
+-- Loading entity xor_gate
+End time: 17:29:43 on Nov 04,2024, Elapsed time: 0:00:03
+Errors: 0, Warnings: 0
+QuestaSim vcom 2022.4 Compiler 2022.10 Oct 18 2022
+Start time: 17:29:43 on Nov 04,2024
+vcom -O0 -check_synthesis -2008 -work work -suppress 1236 src/fulladder.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package adder4_pkg
+-- Compiling entity fulladder
+-- Compiling architecture beh of fulladder
+-- Loading entity halfadder
+-- Loading entity or_gate
+End time: 17:29:46 on Nov 04,2024, Elapsed time: 0:00:03
+Errors: 0, Warnings: 0
+QuestaSim vcom 2022.4 Compiler 2022.10 Oct 18 2022
+Start time: 17:29:46 on Nov 04,2024
+vcom -O0 -check_synthesis -2008 -work work -suppress 1236 src/adder4.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package adder4_pkg
+-- Compiling entity adder4
+-- Compiling architecture arch of adder4
+-- Loading entity fulladder
+End time: 17:29:49 on Nov 04,2024, Elapsed time: 0:00:03
+Errors: 0, Warnings: 0
+QuestaSim vcom 2022.4 Compiler 2022.10 Oct 18 2022
+Start time: 17:29:49 on Nov 04,2024
+vcom -O0 -check_synthesis -2008 -work work -suppress 1236 tb/adder4_tb.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package adder4_pkg
+-- Compiling entity adder4_tb
+-- Compiling architecture tb of adder4_tb
+End time: 17:29:52 on Nov 04,2024, Elapsed time: 0:00:03
+Errors: 0, Warnings: 0

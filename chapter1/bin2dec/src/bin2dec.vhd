@@ -16,35 +16,33 @@ end entity;
 architecture beh of bin2dec is 
 
 begin
-	main : process (all)
-		variable x : natural := 0;
-		variable stellen : natural :=0;
+	main : process (bin_in)
+		variable temp : natural := 0;
 		variable num : natural :=0;
-		variable i : natural :=0;
+		variable l : natural :=0;
 
+		pure function bintodec (bin : std_ulogic_vector ) return natural is
+			variable dec : natural :=0;
+			begin
+				for i in 0 to bin'length-1 loop
+					if(bin(i)='1') then 
+						dec := dec + (2**i);
+					end if;
+				end loop;
+		return dec;
+		end function;
+		
 	begin 
-		for i in 0 to bin_in'length-1 loop
-			if(bin_in(i)='1') then 
-				x := x + (2**i);
-			end if;
-		end loop;
-
-		dec_out <= x;
-
-
-		report "num: " & to_string(x) ;
-
-		--stellen := dec_out'length/4 -1;
-		--report "num: " & to_string(stellen) ;
 		
 
+		temp := bintodec(bin_in);
+		dec_out <= temp;		
 		bcd_out <= (others => '0');
-		while(x>0) loop
-			num := x mod 10;
-			bcd_out(4 *i+3 downto i*4)  <= std_ulogic_vector(to_unsigned(num, 4));
-			report "num: " & to_string(num) ;
-			x := x / 10;
-			i:=i+1;
+		while(temp>0) loop
+			num := temp mod 10;
+			bcd_out(4 *l+3 downto l*4)  <= std_ulogic_vector(to_unsigned(num, 4));
+			temp := temp / 10;
+			l:=l+1;
 		end loop;
  	end process;
  end architecture;

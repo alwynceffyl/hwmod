@@ -17,25 +17,29 @@ architecture arch of sorting is
 		end loop;
 	end procedure;
 
-
-
+   
 	procedure merge(data : inout int_arr_t; left, mid, right : integer; ascOrdesc : boolean) is
+		
 		variable n1 : integer := mid - left + 1;
     	variable n2 : integer := right - mid;
+
     	variable leftArr : int_arr_t(0 to n1 - 1);
     	variable rightArr : int_arr_t(0 to n2 - 1);
+
 		variable i : integer := 0;
     	variable j : integer := 0;
     	variable k : integer := left;
 
 	begin
+		
     -- Copy data to temporary arrays
-    for i in 0 to n1 - 1 loop
-        leftArr(i) := data(left + i);
+    for l in 0 to n1 - 1 loop
+        leftArr(l) := data(left + l);
     end loop;
-    for j in 0 to n2 - 1 loop
-        rightArr(j) := data(mid + 1 + j);
+    for l in 0 to n2 - 1 loop
+        rightArr(l) := data(mid + 1 + l);
     end loop;
+
 
     -- Merge the temporary arrays back into data
     while (i < n1) and (j < n2) loop
@@ -49,14 +53,12 @@ architecture arch of sorting is
         k := k + 1;
     end loop;
 
-    -- Copy remaining elements of leftArr[]
     while i < n1 loop
         data(k) := leftArr(i);
         i := i + 1;
         k := k + 1;
     end loop;
 
-    -- Copy remaining elements of rightArr[]
     while j < n2 loop
         data(k) := rightArr(j);
         j := j + 1;
@@ -78,11 +80,9 @@ architecture arch of sorting is
 		mid := left + (right - left) / 2;
 
 		if(data'ascending) then
-			--print_array(data(left to mid));
 			mergeSort(data(left to mid));
 			mergeSort(data(mid + 1 to right));
 		else 
-			--print_array(data(mid downto left));
 			mergeSort(data(mid downto left));
 			mergeSort(data(right downto mid + 1));
 		end if;
